@@ -16,7 +16,7 @@ export function RaportPrint({ student, settings, paperSize }: RaportPrintProps) 
         <>
             <style>{`
                 @media print {
-                    @page { size: ${paperSize === 'A4' ? '210mm 297mm' : '210mm 330mm'}; margin: 0; }
+                    @page { size: ${paperSize === 'A4' ? '210mm 297mm' : '210mm 330mm'}; margin: 10mm; }
                 }
                 ${paperSize === 'F4' ? `
                     .print-page { min-height: 330mm !important; }
