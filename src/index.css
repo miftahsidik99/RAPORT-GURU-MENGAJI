@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@layer utilities {
+    .hidden-table-empty {
+        display: table-cell;
+    }
+}
+
+@media print {
+    body {
+        margin: 0;
+        background-color: white !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .print-container {
+        width: 100% !important;
+        margin: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .print-page {
+        page-break-after: always;
+        break-after: page;
+        margin: 0 !important;
+        padding: 1cm 1.5cm !important;
+        box-shadow: none !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+    }
+
+    .page-break {
+        display: none !important;
+    }
+
+    @page {
+        margin: 0;
+    }
+}
